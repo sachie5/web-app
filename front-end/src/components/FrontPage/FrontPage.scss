@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables" as *;
+
+.banner {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: $font-body;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 40px;
+}

@@ -1,0 +1,11 @@
+@use "../../assets/styles/variables" as *;
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0 20px;
+    color: $text-color;
+    font-family: $font-body;
+}

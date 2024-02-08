@@ -1,0 +1,15 @@
+@use "../../assets/styles/variables" as *;
+
+.nav {
+    background-color: $background-color;
+    
+    &__main{
+        height: 5vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+}
+
