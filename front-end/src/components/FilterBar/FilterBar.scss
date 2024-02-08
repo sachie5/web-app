@@ -1,0 +1,12 @@
+@use "../../assets/styles/variables" as *;
+
+.nav {
+    &__filter{
+        height: 5vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: $font-body;
+        color: $text-color;
+    }
+}
