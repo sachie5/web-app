@@ -1,4 +1,2 @@
-package com.nology.app;
-
-public class AppRepository {
+package com.nology.anime;public interface AnimeRepository {
 }
