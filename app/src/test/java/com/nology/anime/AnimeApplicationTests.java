@@ -1,10 +1,10 @@
-package com.nology.app;
+package com.nology.anime;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AppApplicationTests {
+class AnimeApplicationTests {
 
 	@Test
 	void contextLoads() {

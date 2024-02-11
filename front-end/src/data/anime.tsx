@@ -1,0 +1,76 @@
+import { Anime, genre } from "../types/animeTypes";
+
+export let animeList: Anime[] = [
+  {
+    id: 1,
+    name: "Fullmetal Alchemist: Brotherhood",
+    author: "Hiromu Arakawa",
+    genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+    episodes: 51,
+    year: 2009,
+  },
+  {
+    id: 2,
+    name: "Fullmetal Alchemist",
+    author: "Hiromu Arakawa",
+    genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+    episodes: 64,
+    year: 2003,
+  },
+  {
+    id: 3,
+    name: "Bleach: Sennen Kessen-hen",
+    author: "Tite Kubo",
+    genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+    episodes: 26,
+    year: 2022,
+  },
+  {
+    id: 4,
+    name: "Clannad",
+    author: "Itaru Hinoue",
+    genre: ["Drama", "Romance"],
+    episodes: 24,
+    year: 2007,
+  },
+  {
+    id: 5,
+    name: "Code Geass",
+    author: "Ichiro Okouchi",
+    genre: ["Action", "Drama", "Mecha", "Sci-Fi"],
+    episodes: 25,
+    year: 2006,
+  },
+  {
+    id: 6,
+    name: "Demon Slayer",
+    author: "Koyoharu Gotouge",
+    genre: ["Adventure", "Fantasy", "Shounen"],
+    episodes: 55,
+    year: 2019,
+  },
+  {
+    id: 7,
+    name: "One Piece",
+    author: "Eiichiro Oda",
+    genre: ["Action", "Adventure", "Fantasy", "Shounen", "Sci-Fi"],
+    episodes: 1092,
+    year: 1999,
+  },
+  {
+    id: 8,
+    name: "fullmetal Alchemist: Brotherhood",
+    author: "",
+    genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+    episodes: 64,
+    year: 2009,
+  },  
+  {
+    id: 9,
+    name: "Jujutsu Kaisen",
+    author: "Gege Akutami",
+    genre: ["Adventure", "Fantasy", "Shounen"],
+    episodes: 47,
+    year: 2020,
+  }
+];

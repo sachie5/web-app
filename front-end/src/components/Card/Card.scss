@@ -1,0 +1,30 @@
+@use "../../assets/styles/variables" as *;
+
+.anime-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    height: 200px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+
+    &__image {
+        height: 7rem;
+        position: relative;
+    }
+
+    &__info {
+        height: fit-content;
+    }
+
+    &__name, &__year {
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "author": "Hiromu Arakawa",
+    "genres": ["Action", "Adventure", "Fantasy", "Shounen"],
+    "episodes": 51,
+    "year": 2009
+  },
+  {
+    "id": 2,
+    "title": "Fullmetal Alchemist",
+    "author": "Hiromu Arakawa",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "episodes": 64,
+    "year": 2003
+  },
+  {
+    "id": 3,
+    "title": "Bleach: Sennen Kessen-hen",
+    "author": "Tite Kubo",
+    "genres": ["Action", "Fantasy", "Shounen"],
+    "episodes": 26,
+    "year": 2022
+  },
+  {
+    "id": 4,
+    "title": "Clannad",
+    "author": "Itaru Hinoue",
+    "genres": ["Drama", "Romance"],
+    "episodes": 24,
+    "year": 2007
+  },
+  {
+    "id": 5,
+    "title": "Code Geass",
+    "author": "Ichiro Okouchi",
+    "genres": ["Action", "Mecha", "Sci-Fi"],
+    "episodes": 25,
+    "year": 2006
+  },
+  {
+    "id": 6,
+    "title": "Demon Slayer",
+    "author": "Koyoharu Gotouge",
+    "genres": ["Adventure", "Fantasy", "Shounen"],
+    "episodes": 55,
+    "year": 2019
+  },
+  {
+    "id": 7,
+    "title": "One Piece",
+    "author": "Eiichiro Oda",
+    "genres": ["Action", "Adventure", "Shounen"],
+    "episodes": 1092,
+    "year": 1999
+  },
+  {
+    "id": 8,
+    "title": "Erased",
+    "author": "Kei Sanbe",
+    "genres": ["Sci-Fi", "Mystery", "Thriller"],
+    "episodes": 12,
+    "year": 2016
+  },
+  {
+    "id": 9,
+    "title": "Jujutsu Kaisen",
+    "author": "Gege Akutami",
+    "genres": ["Adventure", "Fantasy", "Shounen"],
+    "episodes": 47,
+    "year": 2020
+  }
+]

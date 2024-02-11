@@ -1,23 +1,35 @@
-package com.nology.app;
+package com.nology.anime;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.Year;
+import java.util.List;
 
 @RestController
-public class AppController {
+public class AnimeController {
+
+    @Autowired
+    AnimeRepositoryNonDB animeRepositoryNonDB;
 
     // CREATE
+    @PostMapping("/anime/new")
+    public Anime addAnime(Anime anime){
+      animeRepositoryNonDB.addAnime(anime);
+      return anime;
+    }
 
     //READ
     @GetMapping("/anime")
-    public String getAnime(){
-        return "Anime List";
+    public List<Anime> getAnime(){
+        System.out.println(String.valueOf(animeRepositoryNonDB.getAllAnime()));
+        return animeRepositoryNonDB.getAllAnime();
     }
 
     @GetMapping("/anime/{id}")
-    public void getAnimeById(@RequestParam long id){
-        return anime.
+    public Anime getAnimeById(@PathVariable long id){
+        System.out.println(animeRepositoryNonDB.getAnimeById(id));
+        return animeRepositoryNonDB.getAnimeById(id);
     }
 
 

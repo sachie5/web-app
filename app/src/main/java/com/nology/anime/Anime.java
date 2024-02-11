@@ -1,22 +1,26 @@
-package com.nology.app;
+package com.nology.anime;
 
 import java.time.Year;
+import java.util.List;
 import java.util.Random;
 
-public class App {
+public class Anime {
 
     private long id = new Random().nextLong();
-    private String name;
+    private String title;
     private String author;
-    private String genre;
-    private int episodes;
-    private Year yearOfRelease;
+    private List<String> genres;
+    private long episodes;
+    private long yearOfRelease;
 
-    public App(long id, String name, String author, String genre, int episodes, Year yearOfRelease) {
+    public Anime(){
+    }
+
+    public Anime(long id, String title, String author, List<String> genres, long episodes, long yearOfRelease) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.author = author;
-        this.genre = genre;
+        this.genres = genres;
         this.episodes = episodes;
         this.yearOfRelease = yearOfRelease;
     }
@@ -30,11 +34,11 @@ public class App {
     }
 
     public String getName() {
-        return name;
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -45,27 +49,27 @@ public class App {
         this.author = author;
     }
 
-    public String getGenre() {
-        return genre;
+    public List<String> getGenres() {
+        return genres;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setGenre(List<String> genres) {
+        this.genres = genres;
     }
 
-    public int getEpisodes() {
+    public long getEpisodes() {
         return episodes;
     }
 
-    public void setEpisodes(int episodes) {
+    public void setEpisodes(long episodes) {
         this.episodes = episodes;
     }
 
-    public Year getYearOfRelease() {
+    public long getYearOfRelease() {
         return yearOfRelease;
     }
 
-    public void setYearOfRelease(Year yearOfRelease) {
+    public void setYearOfRelease(long yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
     }
 }
