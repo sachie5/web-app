@@ -1,10 +1,11 @@
 export type Anime = {
     id: number,
-    name: string,
+    title: string,
     author: string,
+    image: string,
     genre: string[],
     episodes: number,
-    year: number
+    yearOfRelease: number
 }
 
 export type genre = {

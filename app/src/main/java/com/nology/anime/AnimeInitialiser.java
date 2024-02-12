@@ -38,11 +38,12 @@ public class AnimeInitialiser {
                 long id = (long) animeJSON.get("id");
                 String title = (String) animeJSON.get("title");
                 String author = (String) animeJSON.get("author");
+                String image = (String) animeJSON.get("image");
                 List<String> genres = (List<String>) animeJSON.get("genres");
                 long episodes = (long) animeJSON.get("episodes");
                 long yearOfRelease = (long) animeJSON.get("year");
 
-                animeRepositoryNonDB.addAnime(new Anime(id, title, author, genres, episodes, yearOfRelease));
+                animeRepositoryNonDB.addAnime(new Anime(id, title, author, image, genres, episodes, yearOfRelease));
             }
 
         } catch (Exception e) {

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class AnimeRepositoryNonDB {
@@ -27,4 +28,9 @@ public class AnimeRepositoryNonDB {
         }
         return null;
     }
+
+    public List<String> getAllGenres() {
+       return animeList.stream().map(anime -> anime.getGenres().toString()).toList();
+    }
+
 }

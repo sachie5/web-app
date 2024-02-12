@@ -1,7 +1,8 @@
-@use "../../assets/styles/variables" as *;
+@use "../../styles/variables" as *;
 
 .nav {
     background-color: $background-color;
+    font-family: var(--font);
     
     &__main{
         height: 5vh;

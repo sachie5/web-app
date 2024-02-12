@@ -7,6 +7,7 @@ import java.time.Year;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class AnimeController {
 
     @Autowired
@@ -30,6 +31,11 @@ public class AnimeController {
     public Anime getAnimeById(@PathVariable long id){
         System.out.println(animeRepositoryNonDB.getAnimeById(id));
         return animeRepositoryNonDB.getAnimeById(id);
+    }
+
+    @GetMapping("/anime/genres")
+    public List<String> getAllGenres(){
+        return animeRepositoryNonDB.getAllGenres();
     }
 
 

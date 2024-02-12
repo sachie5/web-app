@@ -4,7 +4,7 @@ import "./Button.scss";
 type ButtonProps = {
     name: string;
     className: string;
-    onClick: MouseEventHandler<HTMLButtonElement>;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button = ({name, className, onClick}: ButtonProps) => {

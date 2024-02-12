@@ -1,14 +1,22 @@
 package com.nology.anime;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.Year;
 import java.util.List;
 import java.util.Random;
-
+@Entity
 public class Anime {
 
-    private long id = new Random().nextLong();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String title;
     private String author;
+    private String image;
     private List<String> genres;
     private long episodes;
     private long yearOfRelease;
@@ -16,10 +24,11 @@ public class Anime {
     public Anime(){
     }
 
-    public Anime(long id, String title, String author, List<String> genres, long episodes, long yearOfRelease) {
+    public Anime(long id, String title, String author, String image, List<String> genres, long episodes, long yearOfRelease) {
         this.id = id;
         this.title = title;
         this.author = author;
+        this.image = image;
         this.genres = genres;
         this.episodes = episodes;
         this.yearOfRelease = yearOfRelease;
@@ -33,11 +42,11 @@ public class Anime {
         this.id = id;
     }
 
-    public String getName() {
+    public String getTitle() {
         return title;
     }
 
-    public void setName(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -49,11 +58,19 @@ public class Anime {
         this.author = author;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public List<String> getGenres() {
         return genres;
     }
 
-    public void setGenre(List<String> genres) {
+    public void setGenres(List<String> genres) {
         this.genres = genres;
     }
 

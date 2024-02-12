@@ -1,6 +1,7 @@
 import { MouseEvent, MouseEventHandler } from "react";
 import Button from "../Button/Button";
 import "./NavBar.scss";
+import { Link } from "react-router-dom";
 
 type NavBarProps = {
     name: string;
@@ -10,8 +11,8 @@ type NavBarProps = {
 const NavBar = ({name, onClick}: NavBarProps) => {
     return (
         <nav className={`nav nav__${name}`}>
-            <Button name="Home" className="nav-button" onClick={onClick}/>
-            <Button name="A-Z" className="nav-button" onClick={onClick}/>
+            <Link to="/" ><Button name="Home" className="nav-button"/></Link>
+            <Link to="/anime"> <Button name="A-Z" className="nav-button"/></Link>
             <Button name="Rankings" className="nav-button" onClick={onClick}/>
         </nav>
     )

@@ -2,17 +2,17 @@ import "./Card.scss";
 
 type CardProps = {
     id: number;
-    name: string;
-    year: number;
+    title: string;
+    image: string;
+    yearOfRelease: number;
   };
   
-  const Card = ({ id, name, year }: CardProps) => {
+  const Card = ({ id, title, image, yearOfRelease }: CardProps) => {
     return (
       <div className="anime-card" key={id}>
-        <div className="anime-card__info">
-          <h1 className="anime-card__name">{name}</h1>
-          <h2 className="anime-card__year">{year}</h2>
-        </div>
+          <img className="anime-card__image" src={image} alt={title} />
+          <h1 className="anime-card__name">{title}</h1>
+          <h2 className="anime-card__year">{yearOfRelease}</h2>
       </div>
     );
   };

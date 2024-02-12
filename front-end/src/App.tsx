@@ -1,9 +1,12 @@
-import { FormEvent, MouseEvent, MouseEventHandler, useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import FrontPage from "./components/FrontPage/FrontPage";
 import FilterBar from "./components/FilterBar/FilterBar";
 import { Anime } from "./types/animeTypes";
-import Main from "./components/Main/Main";
+import Main from "./containers/Main/Main";
+import InfoPage from "./containers/InfoPage/InfoPage";
+import "./App.scss";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -14,13 +17,13 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     setAnime(data);
-  };
+  }; 
 
   useEffect(() => {
     getAnime();
-  }, [])
+  }, []) 
 
-  const onClick = (event: MouseEvent) => {
+  const onClick = () => {
     alert("Button clicked");
   };
 
@@ -29,7 +32,10 @@ function App() {
     setSearchTerm(newInput);
   };
 
+  const filteredAnimes =  anime.filter(ani => ani.title.includes(searchTerm));
+
   return (
+    <HashRouter>
     <div className="app">
       <header>
         <NavBar name="main" onClick={onClick} />
@@ -41,9 +47,13 @@ function App() {
           handleInputFunction={handleInput}
           searchTerm={searchTerm}
         />
-        <Main anime={anime} />
+        <Routes>
+        <Route path="/" element={<Main anime={filteredAnimes} />} />
+        <Route path="/anime/:id" element={<InfoPage anime={anime} />} />
+      </Routes>
       </main>
     </div>
+    </HashRouter>
   );
 }
 

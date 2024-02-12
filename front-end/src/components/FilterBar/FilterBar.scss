@@ -1,4 +1,4 @@
-@use "../../assets/styles/variables" as *;
+@use "../../styles/variables" as *;
 
 .nav {
     &__filter{
@@ -6,7 +6,6 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        font-family: $font-body;
         color: $text-color;
     }
 }

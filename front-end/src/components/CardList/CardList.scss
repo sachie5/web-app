@@ -1,10 +1,11 @@
-@use "../../assets/styles/variables" as *;
+@use "../../styles/variables" as *;
 
 .card-container {
     display: grid;
     padding: 10px;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
+    
 }
 
 .default {
@@ -16,7 +17,7 @@
 @media screen and (min-width: 768px) {
     .card-container {
         gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .default {
@@ -28,6 +29,6 @@
 @media screen and (min-width: 1024px) {
     .card-container {
         gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
