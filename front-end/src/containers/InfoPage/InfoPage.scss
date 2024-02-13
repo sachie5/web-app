@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+
+
+.anime-info {
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    &__title{
+        font-size: 3rem;
+    }
+
+    &__author, &__year{
+        font-size: 1.5rem;
+    }
+
+    &__image{
+        height: 35vh;
+        padding: 10px;
+    }
+
+    &__extra{
+        font-size: 1.3rem;
+    }
+
+    &__selection{
+        margin: 5px 0;
+    }
+}
