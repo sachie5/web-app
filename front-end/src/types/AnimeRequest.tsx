@@ -5,5 +5,5 @@ export type Anime = {
     image: string,
     genre: string[],
     episodes: number,
-    yearOfRelease: number
+    year_of_release: number
 }

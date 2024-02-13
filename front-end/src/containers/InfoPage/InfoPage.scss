@@ -1,32 +1,52 @@
 @use "../../styles/variables" as *;
 
+.information {
+  font-family: var(--font);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  border: 3px solid black;
+  background-color: $text-color;
+
+  &__container {
+    height: 100%;
+
+    &--image {
+      align-self: flex-start;
+      height: 63vh;
+      padding: 10px;
+    }
+  }
+
+  &__text {
+    padding: 20px;
+    text-align: center;
 
 
-.anime-info {
-    font-family: var(--font);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-
-    &__title{
-        font-size: 3rem;
+    &--title {
+      font-size: 3rem;
     }
 
-    &__author, &__year{
-        font-size: 1.5rem;
+    &--author,
+    &--year {
+      font-size: 1.5rem;
     }
 
-    &__image{
-        height: 35vh;
-        padding: 10px;
+    &--extra {
+      font-size: 1.3rem;
     }
 
-    &__extra{
-        font-size: 1.3rem;
+    &--selection {
+      margin: 10px 0;
     }
 
-    &__selection{
-        margin: 5px 0;
+    &--description{
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 20px;
     }
+
+
+  }
 }

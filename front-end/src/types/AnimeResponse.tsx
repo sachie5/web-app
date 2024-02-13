@@ -4,7 +4,7 @@ export type Anime = {
     author: string,
     image: string,
     episodes: number,
-    yearOfRelease: number,
+    year_of_release: number,
     informationId: number,
     information: {
         id: number,

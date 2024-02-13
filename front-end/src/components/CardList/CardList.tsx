@@ -21,7 +21,7 @@ type CardListProps = {
                 id={anime.id}
                 title={anime.title}
                 image={anime.image} 
-                yearOfRelease={anime.yearOfRelease} 
+                year_of_release={anime.year_of_release} 
                  />
               </Link>
             ))}
