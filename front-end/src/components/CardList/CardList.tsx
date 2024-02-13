@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Anime } from "../../types/animeTypes";
+import { Anime } from "../../types/AnimeRequest";
 import Card from "../Card/Card";
 import "./CardList.scss";
 

@@ -1,17 +1,19 @@
 @use "../../styles/variables" as *;
 
 .anime-card{
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px;
+    border: 2px solid $primary-color;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px $text-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 300px;
     padding: 10px;
-    background-color: #FFFFFF;
+    background-color: #FEFADC;
     text-align: center;
+    color:black;
+    
 
     &__image {
         height: 10rem;
@@ -23,8 +25,14 @@
         font-size: 15px;
         margin: 5px;
     }
+
+    &__name:hover{
+        color: $background-color;
+        font-size: 20px;
+    }
 }
 
-a:active, a:visited{
+a {
     text-decoration: none;
 }
+

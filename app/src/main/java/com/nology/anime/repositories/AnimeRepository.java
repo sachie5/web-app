@@ -1,5 +1,6 @@
-package com.nology.anime;
+package com.nology.anime.repositories;
 
+import com.nology.anime.models.Anime;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

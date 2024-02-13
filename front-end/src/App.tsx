@@ -1,16 +1,17 @@
-import { FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import FrontPage from "./components/FrontPage/FrontPage";
 import FilterBar from "./components/FilterBar/FilterBar";
-import { Anime } from "./types/animeTypes";
-import Main from "./containers/Main/Main";
+import { Anime } from "./types/AnimeRequest";
+import Main from "./containers/Home/Home";
 import InfoPage from "./containers/InfoPage/InfoPage";
 import "./App.scss";
 import { HashRouter, Route, Routes } from "react-router-dom";
+import Home from "./containers/Home/Home";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [anime, setAnime] = useState<Anime[]>([]);
+  const [anime, setAnime] = useState<Anime[]>([]);;
 
   const getAnime = async () => {
     const url = `http://localhost:8080/anime`;
@@ -32,6 +33,7 @@ function App() {
     setSearchTerm(newInput);
   };
 
+
   const filteredAnimes =  anime.filter(ani => ani.title.includes(searchTerm));
 
   return (
@@ -48,8 +50,8 @@ function App() {
           searchTerm={searchTerm}
         />
         <Routes>
-        <Route path="/" element={<Main anime={filteredAnimes} />} />
-        <Route path="/anime/:id" element={<InfoPage anime={anime} />} />
+        <Route path="/" element={<Home anime={filteredAnimes} />} />
+        <Route path="/anime/:id" element={<InfoPage anime={anime}/>} />
       </Routes>
       </main>
     </div>

@@ -1,9 +1,9 @@
 package com.nology.anime;
 
+import com.nology.anime.models.Anime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Year;
 import java.util.List;
 
 @RestController
@@ -11,31 +11,31 @@ import java.util.List;
 public class AnimeController {
 
     @Autowired
-    AnimeRepositoryNonDB animeRepositoryNonDB;
+    AnimeService animeService;
+
+    @ExceptionHandler
+    public String handleExceptions(AnimeNotFoundException exception) {
+        return exception.getMessage();
+    }
 
     // CREATE
     @PostMapping("/anime/new")
     public Anime addAnime(Anime anime){
-      animeRepositoryNonDB.addAnime(anime);
+      animeService.addAnime(anime);
       return anime;
     }
 
     //READ
     @GetMapping("/anime")
     public List<Anime> getAnime(){
-        System.out.println(String.valueOf(animeRepositoryNonDB.getAllAnime()));
-        return animeRepositoryNonDB.getAllAnime();
+        System.out.println(animeService.getAllAnime());
+        return animeService.getAllAnime();
     }
 
     @GetMapping("/anime/{id}")
     public Anime getAnimeById(@PathVariable long id){
-        System.out.println(animeRepositoryNonDB.getAnimeById(id));
-        return animeRepositoryNonDB.getAnimeById(id);
-    }
-
-    @GetMapping("/anime/genres")
-    public List<String> getAllGenres(){
-        return animeRepositoryNonDB.getAllGenres();
+        System.out.println(animeService.getAnimeById(id));
+        return animeService.getAnimeById(id);
     }
 
 
@@ -43,4 +43,9 @@ public class AnimeController {
 
 
     //DELETE
+    @DeleteMapping("/anime/{id}")
+    public String deleteAnimeById(@PathVariable long id) {
+        animeService.deleteAnimeById(id);
+        return "Deleted Anime";
+    }
 }
