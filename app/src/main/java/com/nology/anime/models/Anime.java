@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import java.time.Year;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
+
 @Entity
 public class Anime {
 
@@ -17,21 +19,18 @@ public class Anime {
     private String title;
     private String author;
     private String image;
-    private List<String> genres;
-    private long episodes;
-    private long yearOfRelease;
+    private int episodes;
+    private int year_of_release;
 
     public Anime(){
     }
 
-    public Anime(long id, String title, String author, String image, List<String> genres, long episodes, long yearOfRelease) {
-        this.id = id;
+    public Anime(String title, String author, String image, int episodes, int year_of_release) {
         this.title = title;
         this.author = author;
         this.image = image;
-        this.genres = genres;
         this.episodes = episodes;
-        this.yearOfRelease = yearOfRelease;
+        this.year_of_release = year_of_release;
     }
 
     public long getId() {
@@ -66,27 +65,19 @@ public class Anime {
         this.image = image;
     }
 
-    public List<String> getGenres() {
-        return genres;
-    }
-
-    public void setGenres(List<String> genres) {
-        this.genres = genres;
-    }
-
-    public long getEpisodes() {
+    public int getEpisodes() {
         return episodes;
     }
 
-    public void setEpisodes(long episodes) {
+    public void setEpisodes(int episodes) {
         this.episodes = episodes;
     }
 
-    public long getYearOfRelease() {
-        return yearOfRelease;
+    public int getYearOfRelease() {
+        return year_of_release;
     }
 
-    public void setYearOfRelease(long yearOfRelease) {
-        this.yearOfRelease = yearOfRelease;
+    public void setYearOfRelease(int year_of_release) {
+        this.year_of_release = year_of_release;
     }
 }

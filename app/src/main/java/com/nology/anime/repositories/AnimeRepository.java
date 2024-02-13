@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AnimeRepository extends JpaRepository<Anime, Long> {
 
+    void deleteAnimeById(long id);
 }

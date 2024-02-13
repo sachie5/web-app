@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "author": "Hiromu Arakawa",
+    "episodes": 51,
+    "anime_description": "Two brothers search for a Philosopher's Stone after an attempt to revive their deceased mother goes awry and leaves them in damaged physical forms. This version follows the source manga plot throughout unlike Fullmetal Alchemist(2006)",
+    "studio": "Bones"
+  },
+  {
+    "id": 2,
+    "author": "Hiromu Arakawa",
+    "episodes": 64,
+    "anime_description": "When a failed alchemical ritual leaves brothers Edward and Alphonse Elric with severely damaged bodies, they begin searching for the one thing that can save them: the fabled philosopher's stone.",
+    "studio": "Bones"
+  },
+  {
+    "id": 3,
+    "author": "Tite Kubo",
+    "episodes": 26,
+    "anime_description": "The peace is suddenly broken when warning sirens blare through the Soul Society. Residents are disappearing without a trace and nobody knows who's behind it. Meanwhile, a darkness is approaching Ichigo and his friends in Karakura Town.",
+    "studio": "Pierrot Studios"
+  },
+  {
+    "id": 4,
+    "author": "Itaru Hinoue",
+    "episodes": 24,
+    "anime_description": "A high school student who cares little about school or others meets a lonely girl who had to repeat a year while all her friends finished high school. He decides to hang out with her and soon meets more friendly students.",
+    "studio": "Kyoto Animation"
+  },
+  {
+    "id": 5,
+    "author": "Ichiro Okouchi",
+    "episodes": 25,
+    "anime_description": "After being given a mysterious power to control others, an outcast prince becomes the masked leader of the rebellion against an all-powerful empire.",
+    "studio": "Sunrise"
+  },
+  {
+    "id": 6,
+    "author": "Koyoharu Gotouge",
+    "episodes": 55,
+    "anime_description": "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.",
+    "studio": "Ufotable"
+  },
+  {
+    "id": 7,
+    "author": "Eiichiro Oda",
+    "episodes": 1092,
+    "anime_description": "Monkey D. Luffy sets off on an adventure with his pirate crew in hopes of finding the greatest treasure ever, known as the \"One Piece.\"",
+    "studio": "Toei Animation"
+  },
+  {
+    "id": 8,
+    "author": "Kei Sanbe",
+    "episodes": 12,
+    "anime_description": "29-year-old Satoru Fujinuma is sent back in time 18 years to prevent the events leading to his mother's death, which began with a series of kidnappings while he was in 5th grade.",
+    "studio": "A-1 Pictures"
+  },
+  {
+    "id": 9,
+    "author": "Gege Akutami",
+    "episodes": 47,
+    "anime_description": "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.",
+    "studio": "Mappa"
+  }
+]
