@@ -9,7 +9,7 @@ type CardListProps = {
   
   const CardList = ({ animes }: CardListProps) => {
     if (animes.length === 0) {
-      return <p className="default">There is no anime to show.</p>;
+      return <p className="default">There are no anime to show.</p>;
     } else {
       return (
         <div className="card-container">

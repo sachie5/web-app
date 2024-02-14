@@ -1,7 +1,8 @@
 @use "../../styles/variables" as *;
+import 
 
 .banner {
-    background-color: $primary-color;
+    background-image: url("banner-image.jpg");
     color: $text-color;
     height: 20vh;
     display: flex;
