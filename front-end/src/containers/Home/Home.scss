@@ -7,5 +7,22 @@
 .home{
     display: flex;
     background-image: url("../../assets/home-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 70vh;
+    justify-content: space-around;
+
+    &__intro{
+        width: 40vw;
+        color: $text-color;
+
+        &--one{
+           padding: 20px;
+        }
+
+        &--two{
+            margin-bottom: 120px;
+            align-self: center;
+        }
+    }
 }
