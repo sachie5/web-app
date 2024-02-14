@@ -1,14 +1,14 @@
 @use "../../styles/variables" as *;
-import 
 
 .banner {
-    background-image: url("banner-image.jpg");
+    background-image: url("../../assets/banner-image-2.jpg");
     color: $text-color;
-    height: 20vh;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0;
     font-size: 40px;
     font-family: var(--font);
+    text-shadow: 5px 5px 5px black;
 }

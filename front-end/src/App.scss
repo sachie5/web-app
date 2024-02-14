@@ -3,15 +3,16 @@
 
 .app {
     --font: 'Outfit', sans-serif;
+    padding: 30px;
 }
 
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
+
 }
 
 .main{
     background-color: $primary-color;
-    margin: 5px;
 }

@@ -2,11 +2,11 @@ import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import FrontPage from "./components/FrontPage/FrontPage";
 import FilterBar from "./components/FilterBar/FilterBar";
-import { Anime } from "./types/AnimeRequest";
-import Main from "./containers/Home/Home";
+import { Anime } from "./types/AnimeResponse";
 import InfoPage from "./containers/InfoPage/InfoPage";
 import "./App.scss";
 import { HashRouter, Route, Routes } from "react-router-dom";
+import AnimeList from "./containers/AnimeList/AnimeList";
 import Home from "./containers/Home/Home";
 
 function App() {
@@ -40,17 +40,18 @@ function App() {
     <HashRouter>
     <div className="app">
       <header>
-        <NavBar name="main" onClick={onClick} />
-      </header>
-      <main>
+        <NavBar name="main" onClick={onClick} />        
         <FrontPage />
         <FilterBar
           name="filter"
           handleInputFunction={handleInput}
           searchTerm={searchTerm}
         />
+      </header>
+      <main>
         <Routes>
-        <Route path="/" element={<Home anime={filteredAnimes} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/anime" element={<AnimeList anime={filteredAnimes} />} />
         <Route path="/anime/:id" element={<InfoPage anime={anime}/>} />
       </Routes>
       </main>

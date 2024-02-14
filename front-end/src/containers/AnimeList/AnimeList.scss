@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+
+.animeList {
+    padding: 10px;
+    font-family: var(--font);
+    color: $text-color;
+    background-color: $primary-color;
+}
+
+@media screen and (min-width: 768px) {
+    .animeList{
+        padding: 0;
+    }
+}
