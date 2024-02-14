@@ -8,14 +8,9 @@ public class AnimeGenresLink {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private long anime_id;
 
-    @ManyToOne
-    @JoinColumn(name = "anime_id")
-    private Anime anime;
-
-    @ManyToOne
-    @JoinColumn(name = "genres_id")
-    private Genres genres;
+    private long genres_id;
 
     public Long getId() {
         return id;
@@ -25,19 +20,19 @@ public class AnimeGenresLink {
         this.id = id;
     }
 
-    public Anime getAnime() {
-        return anime;
+    public long getAnime_id() {
+        return anime_id;
     }
 
-    public void setAnime(Anime anime) {
-        this.anime = anime;
+    public void setAnime_id(long anime_id) {
+        this.anime_id = anime_id;
     }
 
-    public Genres getGenres() {
-        return genres;
+    public long getGenres_id() {
+        return genres_id;
     }
 
-    public void setGenres(Genres genres) {
-        this.genres = genres;
+    public void setGenres_id(long genres_id) {
+        this.genres_id = genres_id;
     }
 }

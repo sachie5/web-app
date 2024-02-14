@@ -2,7 +2,7 @@ import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import FrontPage from "./components/FrontPage/FrontPage";
 import FilterBar from "./components/FilterBar/FilterBar";
-import { Anime } from "./types/AnimeResponse";
+import { Anime, Genres } from "./types/AnimeResponse";
 import InfoPage from "./containers/InfoPage/InfoPage";
 import "./App.scss";
 import { HashRouter, Route, Routes } from "react-router-dom";
@@ -12,6 +12,7 @@ import Home from "./containers/Home/Home";
 function App() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [anime, setAnime] = useState<Anime[]>([]);;
+  const [genres, setGenres] = useState<string[]>([]);
 
   const getAnime = async () => {
     const url = `http://localhost:8080/anime`;
@@ -51,7 +52,7 @@ function App() {
       <main>
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/anime" element={<AnimeList anime={filteredAnimes} />} />
+        <Route path="/anime" element={<AnimeList genres={genres} />} />
         <Route path="/anime/:id" element={<InfoPage anime={anime}/>} />
       </Routes>
       </main>

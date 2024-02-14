@@ -1,6 +1,8 @@
 package com.nology.anime;
 
 import com.nology.anime.models.Anime;
+import com.nology.anime.models.Genres;
+import com.nology.anime.models.Information;
 import com.nology.anime.repositories.AnimeRepository;
 import com.nology.anime.repositories.GenreRepository;
 import com.nology.anime.repositories.InformationRepository;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -26,8 +29,8 @@ public class AnimeService {
     InformationRepository informationRepository;
 
     // CREATE
-    public void addAnime(Anime anime) {
-        animeRepository.save(anime);
+    public Anime addAnime(Anime anime) {
+        return animeRepository.save(anime);
     }
 
 
@@ -44,20 +47,17 @@ public class AnimeService {
 
 
     public List<Anime> getAllAnime() {
-        return animeRepository
-                .findAll()
-                .stream()
-                .collect(Collectors.toList());
+        return new ArrayList<>(animeRepository.findAll());
     }
 
-//    public List<Anime> getAnimesAndGenres(long anime_id) {
-//        List<Anime> animesWithGenre = animeRepository.getAllAnimesAndGenres(anime_id);
-//        return animesWithGenre.stream().collect(Collectors.toList());
-//    }
+    public List<Genres> getAllGenres() {
+        return genreRepository.findAll();
+    }
 
-//    public List<String> getDistinctGenres(){
-//
-//    }
+    public List<String> getAllGenresName(){
+        return genreRepository.findAll().stream().map(genre -> genre.getName()).collect(Collectors.toList());
+    }
+
     // UPDATE
     //DELETE
     @Transactional
@@ -68,4 +68,6 @@ public class AnimeService {
 
         animeRepository.deleteAnimeById(id);
     }
+
+
 }

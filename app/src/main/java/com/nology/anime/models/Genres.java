@@ -15,16 +15,16 @@ public class Genres {
 
     private String name;
 
-    @ManyToMany(mappedBy = "genres")
-    Set<Anime> animes = new HashSet<>();
-
-    public Set<Anime> getAnimes() {
-        return animes;
-    }
-
-    public void setAnimes(Set<Anime> animes) {
-        this.animes = animes;
-    }
+//    @OneToMany
+//    private Set<Anime> animes = new HashSet<>();
+//
+//    public Set<Anime> getAnimes() {
+//        return animes;
+//    }
+//
+//    public void setAnimes(Set<Anime> animes) {
+//        this.animes = animes;
+//    }
 
     public long getId() {
         return id;

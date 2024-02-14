@@ -31,7 +31,7 @@ public class Anime {
             joinColumns = @JoinColumn(name = "anime_id", insertable = false, updatable = false),
             inverseJoinColumns = @JoinColumn(name = "genres_id", insertable = false, updatable = false)
     )
-    Set<Genres> genres = new HashSet<>();
+    private Set<Genres> genres = new HashSet<>();
 
     public Anime(){
     }

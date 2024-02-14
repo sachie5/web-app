@@ -1,6 +1,7 @@
 package com.nology.anime;
 
 import com.nology.anime.models.Anime;
+import com.nology.anime.models.Genres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,6 +40,11 @@ public class AnimeController {
     public ResponseEntity<Anime> getAnimeById(@PathVariable long id){
         System.out.println(animeService.getAnimeById(id));
         return ResponseEntity.status(HttpStatus.OK).body(animeService.getAnimeById(id));
+    }
+
+    @GetMapping("/genres")
+    public ResponseEntity<List<String>> getGenres(){
+        return ResponseEntity.status(HttpStatus.OK).body(animeService.getAllGenresName());
     }
 
 //    @GetMapping("/anime/{id}/genres")

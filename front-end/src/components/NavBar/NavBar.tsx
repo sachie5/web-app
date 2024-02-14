@@ -13,7 +13,7 @@ const NavBar = ({name, onClick}: NavBarProps) => {
         <nav className={`nav nav__${name}`}>
             <Link to="/" ><Button name="Home" className="nav-button"/></Link>
             <Link to="/anime/az"> <Button name="A-Z" className="nav-button"/></Link>
-            <Button name="Rankings" className="nav-button" onClick={onClick}/>
+            <Link to="/anime/rankings" ><Button name="Rankings" className="nav-button" /></Link>
         </nav>
     )
 }
