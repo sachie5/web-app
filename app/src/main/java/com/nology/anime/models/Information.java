@@ -54,4 +54,6 @@ public class Information {
     public void setStudio(String studio) {
         this.studio = studio;
     }
+
+
 }

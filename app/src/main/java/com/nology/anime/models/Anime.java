@@ -2,9 +2,7 @@ package com.nology.anime.models;
 
 import jakarta.persistence.*;
 
-import java.time.Year;
-import java.util.List;
-import java.util.Random;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -27,6 +25,14 @@ public class Anime {
     @JoinColumn(name = "information_id", insertable = false, updatable = false)
     private Information information;
 
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "anime_genres_link",
+            joinColumns = @JoinColumn(name = "anime_id", insertable = false, updatable = false),
+            inverseJoinColumns = @JoinColumn(name = "genres_id", insertable = false, updatable = false)
+    )
+    Set<Genres> genres = new HashSet<>();
+
     public Anime(){
     }
 
@@ -36,6 +42,14 @@ public class Anime {
         this.image = image;
         this.episodes = episodes;
         this.year_of_release = year_of_release;
+    }
+
+    public Set<Genres> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(Set<Genres> animeGenres) {
+        this.genres = animeGenres;
     }
 
     public int getYear_of_release() {
@@ -101,5 +115,6 @@ public class Anime {
     public void setEpisodes(int episodes) {
         this.episodes = episodes;
     }
+
 
 }

@@ -2,9 +2,13 @@ package com.nology.anime;
 
 import com.nology.anime.models.Anime;
 import com.nology.anime.repositories.AnimeRepository;
+import com.nology.anime.repositories.GenreRepository;
+import com.nology.anime.repositories.InformationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -15,10 +19,19 @@ public class AnimeService {
     @Autowired
     AnimeRepository animeRepository;
 
+    @Autowired
+    GenreRepository genreRepository;
+
+    @Autowired
+    InformationRepository informationRepository;
+
+    // CREATE
     public void addAnime(Anime anime) {
         animeRepository.save(anime);
     }
 
+
+    //READ
     public Anime getAnimeById(long id) {
         Optional<Anime> anime = animeRepository.findById(id);
         if (anime.isEmpty()) {
@@ -31,10 +44,22 @@ public class AnimeService {
 
 
     public List<Anime> getAllAnime() {
-        return animeRepository.findAll().stream().collect(Collectors.toList());
+        return animeRepository
+                .findAll()
+                .stream()
+                .collect(Collectors.toList());
     }
 
+//    public List<Anime> getAnimesAndGenres(long anime_id) {
+//        List<Anime> animesWithGenre = animeRepository.getAllAnimesAndGenres(anime_id);
+//        return animesWithGenre.stream().collect(Collectors.toList());
+//    }
 
+//    public List<String> getDistinctGenres(){
+//
+//    }
+    // UPDATE
+    //DELETE
     @Transactional
     public void deleteAnimeById(long id) {
         if (!animeRepository.existsById(id)) {
