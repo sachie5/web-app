@@ -15,7 +15,7 @@ type CardListProps = {
         <div className="card-container">
           {animes &&
             animes.map((anime) => (
-              <Link to={`anime/${anime.id}`} key={anime.id}>
+              <Link to={`${anime.id}`} key={anime.id}>
                 <Card
                 key={anime.id}
                 id={anime.id}

@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .anime-card{
-    border: 2px solid $text-color;
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;

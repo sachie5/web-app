@@ -7,9 +7,8 @@ import jakarta.persistence.*;
 public class Information {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "anime_id")
     private long id;
-
     private String author;
     private int episodes;
     private String animeDescription;
@@ -54,6 +53,5 @@ public class Information {
     public void setStudio(String studio) {
         this.studio = studio;
     }
-
 
 }

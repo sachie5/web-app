@@ -1,1 +1,6 @@
 @use "../../styles/variables" as *;
+
+.dropdown {
+    display: flex;
+    align-items: center;
+}

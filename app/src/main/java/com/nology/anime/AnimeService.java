@@ -7,6 +7,7 @@ import com.nology.anime.repositories.AnimeRepository;
 import com.nology.anime.repositories.GenreRepository;
 import com.nology.anime.repositories.InformationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,8 +31,9 @@ public class AnimeService {
     InformationRepository informationRepository;
 
     // CREATE
-    public Anime addAnime(Anime anime) {
-        return animeRepository.save(anime);
+    public Anime addAnime(Anime newAnime) {
+        
+        return animeRepository.save(newAnime);
     }
 
 

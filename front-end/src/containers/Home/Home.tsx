@@ -1,10 +1,7 @@
 import "./Home.scss";
 
-type HomeProps = {
 
-}
-
-const Home = ({}: HomeProps) => {
+const Home = () => {
     return (
         <section className="home">
             <h1 className="home__intro home__intro--one">Welcome to The Anime Directory where you can keep track of all the anime you have watched.</h1>

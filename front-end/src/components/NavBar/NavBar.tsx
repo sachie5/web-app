@@ -12,8 +12,9 @@ const NavBar = ({name, onClick}: NavBarProps) => {
     return (
         <nav className={`nav nav__${name}`}>
             <Link to="/" ><Button name="Home" className="nav-button"/></Link>
-            <Link to="/anime/az"> <Button name="A-Z" className="nav-button"/></Link>
+            <Link to="/anime"> <Button name="A-Z" className="nav-button"/></Link>
             <Link to="/anime/rankings" ><Button name="Rankings" className="nav-button" /></Link>
+            <Link to="/anime/new" ><Button name="Add Anime" className="nav-button" /></Link>
         </nav>
     )
 }

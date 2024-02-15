@@ -11,6 +11,7 @@ public class Anime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
     private String title;
     private String author;
@@ -18,11 +19,8 @@ public class Anime {
     private int episodes;
     private int year_of_release;
 
-    @Column(name = "information_id")
-    private long informationId;
-
     @OneToOne
-    @JoinColumn(name = "information_id", insertable = false, updatable = false)
+    @JoinColumn(name = "id")
     private Information information;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
@@ -58,14 +56,6 @@ public class Anime {
 
     public void setYear_of_release(int year_of_release) {
         this.year_of_release = year_of_release;
-    }
-
-    public long getInformationId() {
-        return informationId;
-    }
-
-    public void setInformationId(long informationId) {
-        this.informationId = informationId;
     }
 
     public Information getInformation() {

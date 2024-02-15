@@ -1,0 +1,10 @@
+@use "../../styles/variables" as *;
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px;
+    gap: 15px;
+}
+
+

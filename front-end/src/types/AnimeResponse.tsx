@@ -12,5 +12,12 @@ export type Anime = {
         episodes: number,
         animeDescription: string,
         studio: string
-    }
+    },
+    genres: Genres[]
+}
+
+
+export type Genres = {
+    id: number,
+    name: string
 }

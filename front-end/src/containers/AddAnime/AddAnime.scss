@@ -1,0 +1,41 @@
+@use "../../styles/variables" as *;
+
+.add {
+    color: $text-color;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+        margin-bottom: 20px;
+    }
+}    
+.add-form{
+    height: 50vh;
+    width: 75vw;
+    align-items: center ;
+    border: 2px solid $text-color;
+    padding: 10px;
+
+    &__button{
+        background-color: $text-color;
+        color: $background-color;
+        border: 2px solid $background-color;
+        font-size: 1.2rem;
+        width: 10vw;   
+    }
+
+    &__input {
+        width: 200px;
+        height: 4vh;
+        align-self: center;
+    }
+
+    &__label{
+        font-size: 1.5rem;;
+    }
+
+}
+
