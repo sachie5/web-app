@@ -9,8 +9,6 @@ public class Information {
     @Id
     @Column(name = "anime_id")
     private long id;
-    private String author;
-    private int episodes;
     private String animeDescription;
     private String studio;
 
@@ -20,22 +18,6 @@ public class Information {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getEpisodes() {
-        return episodes;
-    }
-
-    public void setEpisodes(int episodes) {
-        this.episodes = episodes;
     }
 
     public String getAnimeDescription() {

@@ -22,7 +22,7 @@ const AddAnime = ({genres}: AddAnimeProps) => {
         navigate("/anime")
     }
     
-    const defaultFormState = { id: -1, title: "", author: "", image: "" , episodes: - 1, year_of_release: -1, genre: ""};
+    const defaultFormState = { id: -1, title: "", author: "", image: "" , episodes: - 1, year_of_release: -1};
     
     return (
         <section className="add">

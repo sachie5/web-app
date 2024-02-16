@@ -4,7 +4,7 @@ import "./Dropdown.scss";
 type DropdownProps = {
   label: string,
   name: string,
-  items: string[],
+  items: string[] ,
   classname: string,
   onChange: ChangeEventHandler<HTMLSelectElement>,
   defaultValue: string

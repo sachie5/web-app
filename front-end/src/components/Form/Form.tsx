@@ -22,7 +22,6 @@ const Form = ({defaultFormState, classname, items, handleSubmit, defaultValue }:
       image: "",
       episodes: 1,
       year_of_release: 2023,
-      genre : ""
     })
 
     const handleValidation = (event: FormEvent<HTMLFormElement>) => {

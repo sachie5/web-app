@@ -8,14 +8,12 @@ import com.nology.anime.repositories.GenreRepository;
 import com.nology.anime.repositories.InformationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -32,10 +30,8 @@ public class AnimeService {
 
     // CREATE
     public Anime addAnime(Anime newAnime) {
-        
         return animeRepository.save(newAnime);
     }
-
 
     //READ
     public Anime getAnimeById(long id) {
@@ -62,6 +58,19 @@ public class AnimeService {
     }
 
     // UPDATE
+    @Modifying
+    public Anime updateAnime(Anime newAnime, long id) {
+
+        if (!animeRepository.existsById(id)) {
+            throw new AnimeNotFoundException();
+        }
+
+        newAnime.setId(id);
+        animeRepository.save(newAnime);
+
+        return newAnime;
+    }
+
     //DELETE
     @Transactional
     public void deleteAnimeById(long id) {

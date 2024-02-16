@@ -1,5 +1,5 @@
 import "./AnimeList.scss";
-import { Anime } from "../../types/AnimeResponse";
+import { Anime, Genres } from "../../types/AnimeResponse";
 import CardList from "../../components/CardList/CardList";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import FilterBar from "../../components/FilterBar/FilterBar";
@@ -34,7 +34,7 @@ const AnimeList = ({ genres }: AnimeListProps) => {
   }
 
   const filteredAnimes =  anime.filter(ani => {
-    const titleFilter = ani.title.includes(searchTerm);
+    const titleFilter = ani.title.toLowerCase().includes(searchTerm);
     const genreFilter = filter === "All Genres" || ani.genres.some(genre => genre.name === filter);
     return titleFilter && genreFilter; 
       }) ;
@@ -44,7 +44,7 @@ const AnimeList = ({ genres }: AnimeListProps) => {
             <FilterBar
             name="filter"
             handleInputFunction={handleInput}
-            searchTerm={searchTerm} genres={genres} onChange={handleChange} defaultValue={genres[10]}            />
+            searchTerm={searchTerm} genres={genres} onChange={handleChange} defaultValue={"All Genres"}            />
             <CardList animes={filteredAnimes} />
         </section>
     )

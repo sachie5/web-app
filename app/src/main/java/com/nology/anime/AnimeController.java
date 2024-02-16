@@ -52,7 +52,11 @@ public class AnimeController {
 //        return animeService.getAnimesAndGenres(id);
 //    }
     //UPDATE
-
+    @PutMapping("/greeting/{id}")
+    public ResponseEntity<Anime> updateGreeting(@RequestBody Anime newAnime, @PathVariable long id) {
+    Anime updatedAnime = animeService.updateAnime(newAnime, id);
+    return ResponseEntity.status(HttpStatus.OK).body(updatedAnime);
+    }
 
     //DELETE
     @DeleteMapping("/anime/{id}")
